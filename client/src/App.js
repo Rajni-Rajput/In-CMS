@@ -12,7 +12,7 @@ function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch(" http://localhost:3033/api/v1")
+    fetch("https://in-cms-1.onrender.com")
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   },[]);
