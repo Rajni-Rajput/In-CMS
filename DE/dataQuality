@@ -8,8 +8,6 @@ spark = SparkSession.builder \
     .config("spark.jars.packages", "org.mongodb.spark:mongo-spark-connector_2.12:3.0.1") \
     .getOrCreate()
 
-
-
 # MongoDB connection details
 mongo_username = "demo1"
 mongo_password = "demo1"

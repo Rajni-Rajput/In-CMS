@@ -12,7 +12,7 @@ services:
       - ./:/usr/src/app
       - /usr/src/app/node_modules
     ports:
-      - "3034:3033"
+      - "3033:3033"
     depends_on:
       - mongo
     env_file: ./.env
@@ -41,7 +41,7 @@ services:
     depends_on:
       - server
     ports:
-      - "3001:3000"
+      - "3000:3000"
     networks:
       - app-network
 

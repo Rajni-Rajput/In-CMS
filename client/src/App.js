@@ -6,11 +6,22 @@ import UserHomepage from './pages/Homepage/UserHomepage';
 import PolicyForm from './components/Shared/Form/AddPolicyForm';
 //import adminPolicies from './pages/Homepage/adminPolicies';
 import ClaimForm from './components/Shared/Form/AddClaimForm';
-
+import { useEffect, useState } from "react";
 
 function App() {
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    fetch(" http://localhost:3033/api/v1")
+      .then((res) => res.json())
+      .then((data) => setMessage(data.message));
+  },[]);
   return (
+    
     < >
+    <div className="App">
+        <h1>{message}</h1>
+    </div>
       <Routes>
         <Route path='/' element={<Login/>} />  
         <Route path='/register' element={<Register/>} />  
@@ -21,6 +32,6 @@ function App() {
       </Routes>
     </>
   );
-}
+} 
 
 export default App;

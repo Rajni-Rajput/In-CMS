@@ -25,7 +25,7 @@ const UserHomepage = () => {
       }
     }, [email]);
     
-    
+  
     const fetchClaims = async () => {
         try {
             const response = await axios.post('http://localhost:3033/api/v1/view/userClaimList',{email : email});
