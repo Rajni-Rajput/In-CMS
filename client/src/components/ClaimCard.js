@@ -25,10 +25,10 @@ const ClaimApprovalCard = ({ submitBtn, formTitle, claimId, setShowClaimApproval
                     remarks: remarks // Include remarks in the request
                 };
                 if (approval === 'approve') {
-                    await axios.post('http://localhost:3033/api/v1/view/approveClaim', requestData);
+                    await axios.post('https://in-cms-1.onrender.com/api/v1/view/approveClaim', requestData);
                     alert('Claim approved successfully!');
                 } else {
-                    await axios.post('http://localhost:3033/api/v1/view/rejectClaim', requestData);
+                    await axios.post('https://in-cms-1.onrender.com/api/v1/view/rejectClaim', requestData);
                     alert('Claim rejected successfully!');
                 }
                 setShowClaimApprovalCard(false); // Hide the form after successful submission

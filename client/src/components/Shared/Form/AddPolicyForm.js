@@ -21,7 +21,7 @@ const PolicyForm = ({ submitBtn, formTitle , setShowPolicyForm}) => {
                 premium
             };
             
-            await axios.post('http://localhost:3033/api/v1/view/selectPolicy', policyData);
+            await axios.post('https://in-cms-1.onrender.com/api/v1/view/selectPolicy', policyData);
             // Handle success response here (e.g., show success message, update UI)
             alert('Policy added successfully!');
             setShowPolicyForm(false)

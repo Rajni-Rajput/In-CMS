@@ -25,7 +25,7 @@ const Form = ({formType,submitBtn,formTitle}) => {
             password,
             role
           };
-          response = await axios.post('http://localhost:3033/api/v1/auth/login', loginData);
+          response = await axios.post('https://in-cms-1.onrender.com/api/v1/auth/login', loginData);
           if (role === "user" && response.data.isAdmin) {
             return alert('Error.');
           }  else if (role === "admin" && !response.data.isAdmin) {
@@ -62,7 +62,7 @@ const Form = ({formType,submitBtn,formTitle}) => {
             address,
             password
           };
-          response = await axios.post('http://localhost:3033/api/v1/auth/reg', registerData);
+          response = await axios.post('https://in-cms-1.onrender.com/api/v1/auth/reg', registerData);
           alert("Registration successful!");
           navigate('/');
          

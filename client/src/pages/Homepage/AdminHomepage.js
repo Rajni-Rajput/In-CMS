@@ -34,7 +34,7 @@ const AdminHomepage = () => {
 
     const fetchPolicies = async () => {
         try {
-            const response = await axios.get('http://localhost:3033/api/v1/view/listp');
+            const response = await axios.get('https://in-cms-1.onrender.com/api/v1/view/listp');
             
             setpData(response.data.data);
             setcData(null);
@@ -45,7 +45,7 @@ const AdminHomepage = () => {
     };
     const fetchClaims = async () => {
         try {
-            const response = await axios.get('http://localhost:3033/api/v1/view/listc');
+            const response = await axios.get('https://in-cms-1.onrender.com/api/v1/view/listc');
             
             setcData(response.data.data);
             setpData(null);
@@ -70,7 +70,7 @@ const AdminHomepage = () => {
     }
     async function deletePolicy(policyId) {
         try {
-            await axios.post('http://localhost:3033/api/v1/view/deletePolicies',{ _id: policyId });
+            await axios.post('https://in-cms-1.onrender.com/api/v1/view/deletePolicies',{ _id: policyId });
             alert('Policy deleted successfully');
             fetchPolicies(); // Fetch policies again after deletion
         } catch (error) {

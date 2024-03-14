@@ -16,7 +16,7 @@ const UserHomepage = () => {
     const fetchPolicies = useCallback(async () => {
       try {
         console.log('Fetching policies for email:', email);
-        const response = await axios.post('http://localhost:3033/api/v1/view/userPolicyList', { email: email });
+        const response = await axios.post('https://in-cms-1.onrender.com/api/v1/view/userPolicyList', { email: email });
         console.log('Response:', response.data);
         setpData(response.data.data);
         setcData(null);
@@ -28,7 +28,7 @@ const UserHomepage = () => {
   
     const fetchClaims = async () => {
         try {
-            const response = await axios.post('http://localhost:3033/api/v1/view/userClaimList',{email : email});
+            const response = await axios.post('https://in-cms-1.onrender.com/api/v1/view/userClaimList',{email : email});
             
             setcData(response.data.data);
             setpData(null);

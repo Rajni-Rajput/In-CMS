@@ -24,7 +24,7 @@ const ClaimForm = ({ submitBtn, formTitle , setShowClaimForm}) => {
                 //residual_amount,
                 reason
             };
-            response = await axios.post('http://localhost:3033/api/v1/view/addClaim', claimData);
+            response = await axios.post('https://in-cms-1.onrender.com/api/v1/view/addClaim', claimData);
             console.log(response)
             alert('Claim added successfully!');
             setShowClaimForm(false)
